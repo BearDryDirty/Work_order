@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+body, h1, h2, h3, p, div,dl,dd,dt, ol, ul, input, button { margin: 0; padding: 0; }
+body { font-family: 'microsoft yahei', 'Arial', 'Helvetica', 'sans-serif'; text-align: center; -webkit-text-size-adjust: none; overflow-x: hidden; font-size: .9em; background:#fff; color: #404040}
+ol, ul, li { list-style: none; }
+a { text-decoration: none; }
+input, button,select, textarea { border: 0; outline: none; border-radius: 0; font-family: 'microsoft yahei' !important; }
+button { outline: 0; }
+.fl { float: left; }
+.fr { float: right !important; }
+img { border: none; border: 0; outline: none }
+i,b{font-weight: normal; font-style: normal;}
+.relative{position: relative;}
+.transition{transition:all .3s;-moz-transition:all .3s;-ms-transition:all .3s;-o-transition:all .3s;-webkit-transition:all .3s;}
+.hImg{height: 100%; width: auto; float: left; display: block;}
+.wImg{width: 100%; height: auto; float: left; display: block;}
+.box{width: 100%; height: auto; background: #fff;}
+.box94{width: 94%; height: auto; margin-left: 3%}
+.empty{width: 100%; height: 50px; float: left;}
+.none{display:none}
+input {-webkit-appearance:none;}
+.clearfix:before,.clearfix:after{display: table; content: " ";}
+.clearfix:after{clear: both;}
+.clearfix{*zoom: 1;}
+
+.cover{width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 20; background: rgba(0,0,0,.6); display: none}
+
+.wrap{max-width:720px; min-width:320px; height:auto; margin:0 auto; position:relative}
+.top-tit{width: 94%; height: 40px; line-height: 40px; line-height: 40px; text-align: left; font-size: 1.4em; padding:0 3%; background: #eee}
+.top-tit a{height: 40px; display: block; float: right; color: #999; font-size: .8em}
+.top-nav{width: 100%; height: 40px; border-bottom: 1px solid #ccc}
+.top-nav a{width: 20%; height: 39px; line-height: 39px; display: block; float: left; color: #404040}
+.top-nav a i{height: 39px; line-height: 39px; display: inline-block; padding: 0 16px}
+.top-nav .on i{border-bottom: 1px solid #ff3c4b;color: #ff3c4b}
+.top-nav .warn i{background: url(../images/icon-warn.png) right 6px no-repeat; background-size: 16px}
+.top-tools{width: 94%; height: 40px; line-height: 40px; margin: 3% 0 3% 3%}
+.top-tools ul{float: left; width: 100%}
+.top-tools ul li{width: auto; height: 40px; display: block; float: left; margin-right: 3%}
+.top-tools ul li a{width: auto; height: 40px; line-height: 40px; color: #666}
+.top-tools ul li a img{width: 16px; margin-right: 4px; vertical-align: middle; line-height: 40px; margin-top: -5px}
+.top-search{width: 94%; height: 40px; margin:0 0 3% 3%; line-height: 40px}
+.top-search input{width: 34%; height: 38px; border: 1px solid #ccc; text-align: center; border-radius: 8px}
+.top-search button{width: 16%; height: 40px ;margin-left: 3%; background: #ccc; color: #666; border-radius: 8px}
+.year-list-tit{width: 100%; height: 20px; line-height: 20px; background: url(../images/icon-line.png) center repeat-x; color: #666; margin-top: 3%}
+.year-list-tit i{padding: 0 8px; background: #fff}
+.year-list{width: 100%; overflow: hidden;}
+.year-list dt{background: #ccc; color: #fff;display: inline-block; padding: 0 16px; float: left; margin-top: 3%}
+.year-list dd{width: 100%; height: 40px; line-height: 40px;border-bottom: 1px solid #eee; display: inline-block; float: left; text-align: left}
+.year-list dd a{display: block; float: right; width: 22px; height: 22px; margin-top: 7px}
+.year-list dd a img{width: 22px}
+.year-list dd:last-child{border-bottom: none}
+.btn-edit{width: 50px; height: 50px; position: fixed; bottom: 40px; right: 3%; z-index: 2}
+
+.ticket-top{padding: 3% 0; background: #f3f3f3; margin: 3% ;border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,.2)}
+.ticket-top dt{font-size: 1.4em; margin: 0 0 3% 0; text-align: left; text-indent: 6%}
+.ticket-top dd{text-align: left; height: 24px; line-height: 24px}
+.ticket-top dd span{margin: 0 6%}
+.t-n{width: 100%; margin: 8% 0}
+.ticket-main dd{width: 100%; text-align: left; float: left; margin-bottom: 3%}
+.ticket-main dd .tit{float: left;display: block; width: 24%}
+.ticket-main dd .wen{display: block; width: 73%; float: right;}
+.ticket-main dd a{height: 30px; padding: 0 16px; border: 1px solid #404040; border-radius: 8px; display: block; float: right; line-height: 30px; color: #404040; margin-top: 8%}

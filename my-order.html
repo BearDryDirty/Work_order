@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title></title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/mobiscroll_002.js" type="text/javascript"></script>
+<script src="js/mobiscroll_004.js" type="text/javascript"></script>
+<link href="css/mobiscroll_002.css" rel="stylesheet" type="text/css">
+<link href="css/mobiscroll_003.css" rel="stylesheet" type="text/css">
+<script src="js/mobiscroll.js" type="text/javascript"></script>
+<script src="js/mobiscroll_003.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="wrap">
+    <div class="top-tit">我的<a href="">管理</a></div>
+    <div class="top-nav">
+        <a class="on" href=""><i>工单</i></a>
+        <a class="warn" href=""><i>培训</i></a>
+        <a class="warn" href=""><i>保养</i></a>
+        <a href=""><i>客户</i></a>
+        <a href=""><i>文件</i></a>
+    </div>
+    <div class="top-tools">
+        <ul>
+            <li><a href=""><img src="images/icon-order.png">13</a></li>
+            <li><a href=""><img src="images/icon-order.png">6</a></li>
+            <li><a href=""><img src="images/icon-order.png">20</a></li>
+            <li><a href=""><img src="images/icon-order.png">35h</a></li>
+            <li><a href=""><img src="images/icon-order.png">139h</a></li>
+        </ul>
+    </div>
+    <div class="top-search">
+        <input class="fl" type="text" readonly="readonly" name="appDate" id="appDate" placeholder="开始时间">-
+        <button class="fr" type="button" name="button">搜索</button>
+        <input class="fr" type="text" readonly="readonly" name="appDate" id="appDate1" placeholder="结束时间">
+    </div>
+    <div class="box94">
+        <div class="year-list-tit"><i>2017</i></div>
+        <dl class="year-list">
+            <dt>12-7</dt>
+            <dd>14:00  service  i1000sr 阿里巴巴医院 <a href=""><img src="images/icon-arrow.png"></a></dd>
+            <dd>14:00  service  i1000sr 阿里巴巴医院 <a href=""><img src="images/icon-arrow.png"></a></dd>
+            <dd>14:00  service  i1000sr 阿里巴巴医院 <a href=""><img src="images/icon-arrow.png"></a></dd>
+        </dl>
+        <dl class="year-list">
+            <dt>12-3</dt>
+            <dd>14:00  service  i1000sr 阿里巴巴医院 <a href=""><img src="images/icon-arrow.png"></a></dd>
+            <dd>14:00  service  i1000sr 阿里巴巴医院 <a href=""><img src="images/icon-arrow.png"></a></dd>
+        </dl>
+
+        <div class="year-list-tit"><i>2016</i></div>
+        <dl class="year-list">
+            <dt>12-7</dt>
+            <dd>14:00  service  i1000sr 阿里巴巴医院 <a href=""><img src="images/icon-arrow.png"></a></dd>
+        </dl>
+        <dl class="year-list">
+            <dt>12-3</dt>
+            <dd>14:00  service  i1000sr 阿里巴巴医院 <a href=""><img src="images/icon-arrow.png"></a></dd>
+            <dd>14:00  service  i1000sr 阿里巴巴医院 <a href=""><img src="images/icon-arrow.png"></a></dd>
+        </dl>
+    </div>
+    <a class="btn-edit" href=""><img class="wImg" src="images/btn-edit.png"></a>
+</div>
+</body>
+<script type="text/javascript">
+$(function () {
+    var currYear = (new Date()).getFullYear();
+    var opt={};
+    opt.date = {preset : 'date'};
+    opt.default = {
+        theme: 'android-ics light', //皮肤样式
+        display: 'modal', //显示方式
+        mode: 'scroller', //日期选择模式
+        dateFormat: 'yyyy-mm-dd',
+        lang: 'zh',
+        showNow: true,
+        nowText: "今天",
+        startYear: currYear - 10, //开始年份
+        endYear: currYear //结束年份
+    };
+
+    $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+    $("#appDate1").mobiscroll($.extend(opt['date'], opt['default']));
+});
+</script>
+</html>
