@@ -22,6 +22,7 @@ input {-webkit-appearance:none;}
 .clearfix:before,.clearfix:after{display: table; content: " ";}
 .clearfix:after{clear: both;}
 .clearfix{*zoom: 1;}
+.mt3{margin-top: 3%}
 
 .cover{width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 20; background: rgba(0,0,0,.6); display: none}
 
@@ -57,6 +58,22 @@ input {-webkit-appearance:none;}
 .ticket-top dd span{margin: 0 6%}
 .t-n{width: 100%; margin: 8% 0}
 .ticket-main dd{width: 100%; text-align: left; float: left; margin-bottom: 3%}
-.ticket-main dd .tit{float: left;display: block; width: 24%}
+.ticket-main dd .tit{float: left;display: block; width: 24%; font-weight: bold;}
 .ticket-main dd .wen{display: block; width: 73%; float: right;}
+.ticket-main dd .tit1{float: left;display: block; width: 100%; margin-bottom: 3%; font-weight: bold;}
+.ticket-main dd .wen1{display: block; width: 100%; float: left;}
+.ticket-main dd .wen i{height: 19px; line-height: 19px; padding: 0 8px; background: #ccc; display: block; float: left; margin: 0 3% 3% 0}
 .ticket-main dd a{height: 30px; padding: 0 16px; border: 1px solid #404040; border-radius: 8px; display: block; float: right; line-height: 30px; color: #404040; margin-top: 8%}
+
+.icon-chk{width: 18px; height: 18px; margin-right: 8px; position: relative; top: 4px;}
+.font-nor{font-weight: normal !important; width: auto !important}
+.font-nor input[type=checkbox]{ -webkit-appearance: none; background: url(../images/icon-chk.png) no-repeat; background-size: contain;}
+.font-nor input[type="checkbox"]:checked { background: url(../images/icon-chk1.png) no-repeat; background-size: contain;}
+.change-1{height: 40px; line-height: 20px; background: #ccc; display: block; float: left; padding: 3%; text-align: center;}
+.change-2{height: 40px; line-height: 20px;  display: block; float: left; padding: 3%; text-align: left; color: #999}
+.gray-box{background: #eee; padding: 3%; width: 94%; color: #999; text-align: left;resize:none}
+.submit-btn{width: 94%; height: 40px; line-height: 40px; background: #ff3c4b; color: #fff; border-radius: 8px; margin: 6% 0; font-size: 1.2em}
+
+.id-inp{width: 40%; height: 30px; line-height: 30px; background: #ccc; padding: 0 3%; margin-right: 3%; position: relative;top: -5px}
+.id-btn{width: 30%; height: 30px; line-height: 30px; background: #ccc; padding: 0 3%; position: relative;top: -5px}
+.con-result{color: #999}
