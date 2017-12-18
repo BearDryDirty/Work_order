@@ -6,6 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <title></title>
 <link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/date.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -33,40 +34,80 @@
                 <span class="con-result">马化腾 13579246810</span>
             </span>
         </dd>
-        <dd>
-            <select class="" name="">
+        <dd class="mt3 time-wrap">
+            <select class="ticket-sel" name="">
                 <option value="">service</option>
                 <option value="">option</option>
                 <option value="">select</option>
             </select>
-            <span><img src="images/icon-edit1.png"><i>工作时间</i></span>
-            <span><img src="images/icon-edit2.png"><i>交通时间</i></span>
-            <span><img src="images/icon-edit3.png"><i>维修时间</i></span>
-            <span><img src="images/icon-edit4.png"><i>其他时间</i></span>
+            <span class="ticket-add-btn" id="time1"><img src="images/icon-edit1.png"><i>工作时间</i><input type="text"></span>
+            <span class="ticket-add-btn" id="time2"><img src="images/icon-edit2.png"><i>交通时间</i></span>
+            <span class="ticket-add-btn" id="time3"><img src="images/icon-edit3.png"><i>维修时间</i></span>
+            <span class="ticket-add-btn" id="time4"><img src="images/icon-edit4.png"><i>其他时间</i></span>
         </dd>
         <dd>
-            <span class="tit1">更换零件:</span>
-            <span class="wen1">
-                <input type="text" class="change-1" name="" value="7-77612-04 4897-01">
-                <span class="change-2">PC unit<br>Valve-2way</span>
-            </span>
-        </dd>
-        <dd>
-            <span class="tit1">故障描述:</span>
-            <span class="wen1">
-                <textarea class="gray-box" name="name" rows="2" cols="80">肚子不舒服</textarea>
-            </span>
-        </dd>
-        <dd>
-            <span class="tit1">处理方法:</span>
-            <span class="wen1">
-                <textarea class="gray-box" name="name" rows="4" cols="80"></textarea>
-            </span>
+            <dl class="ticket-list time1">
+                <dt>工作时间</dt>
+            </dl>
+            <dl class="ticket-list time2">
+                <dt>交通时间</dt>
+            </dl>
+            <dl class="ticket-list time3">
+                <dt>维修时间</dt>
+            </dl>
+            <dl class="ticket-list time4">
+                <dt>其他时间</dt>
+            </dl>
         </dd>
         <div class="clearfix"></div>
     </dl>
+    <div id="datePlugin"></div>
+    <input type="hidden" value="" id="click_id">
     <button class="submit-btn" type="submit" name="button">提交</button>
 </div>
 </body>
 <script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/date.js" ></script>
+<script type="text/javascript">
+$(function(){
+    del_none();
+	$('#time1').date({theme:"datetime"});
+    $('#time2').date({theme:"datetime"});
+    $('#time3').date({theme:"datetime"});
+    $('#time4').date({theme:"datetime"});
+    $(".time-wrap .ticket-add-btn").click(function(){
+        var _index=$(this).index();
+        $("#click_id").val(_index)
+    })
+});
+function time1(datestr){
+    $(".time1").append("<dd>"+datestr+"<a href='javascript:void(0)' onclick='timedel(this)'><img src='images/icon-close.png'></a></dd>");
+    del_none();
+}
+function time2(datestr){
+    $(".time2").append("<dd>"+datestr+"<a href='javascript:void(0)' onclick='timedel(this)'><img src='images/icon-close.png'></a></dd>");
+    del_none();
+}
+function time3(datestr){
+    $(".time3").append("<dd>"+datestr+"<a href='javascript:void(0)' onclick='timedel(this)'><img src='images/icon-close.png'></a></dd>");
+    del_none();
+}
+function time4(datestr){
+    $(".time4").append("<dd>"+datestr+"<a href='javascript:void(0)' onclick='timedel(this)'><img src='images/icon-close.png'></a></dd>");
+    del_none();
+}
+function del_none(){
+    $(".ticket-main").find(".ticket-list").each(function(){
+        if($(this).find("dd").length!=0){
+            $(this).removeClass("none");
+        }else{
+            $(this).addClass("none")
+        }
+    })
+}
+function timedel(obj){
+    $(obj).parent().remove();
+    del_none()
+}
+</script>
 </html>

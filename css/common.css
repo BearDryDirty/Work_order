@@ -77,3 +77,14 @@ input {-webkit-appearance:none;}
 .id-inp{width: 40%; height: 30px; line-height: 30px; background: #ccc; padding: 0 3%; margin-right: 3%; position: relative;top: -5px}
 .id-btn{width: 30%; height: 30px; line-height: 30px; background: #ccc; padding: 0 3%; position: relative;top: -5px}
 .con-result{color: #999}
+
+.ticket-sel{width: 24%; height: 34px; border-radius: 8px;border: 1px solid #ccc; float: left}
+.ticket-add-btn{width: 19%; height: 30px; display: block; float: left; text-align: center}
+.ticket-add-btn img{width: 16px; display: block; margin: 0 auto}
+.ticket-add-btn i{width: 100%; display: block; font-size: .6em}
+.ticket-list{width: 100%; overflow: hidden;}
+.ticket-list dt{background: #ccc; color: #fff;display: inline-block; padding: 0 16px; float: left; margin-top: 3%}
+.ticket-list dd{width: 100%; height: 40px; line-height: 40px;border-bottom: 1px solid #eee; display: inline-block; float: left; text-align: left; margin-bottom: 0}
+.ticket-list dd a{display: block; float: right; width: 22px; height: 22px; margin-top: 7px; border: none}
+.ticket-list dd a img{width: 16px}
+.ticket-list dd:last-child{border-bottom: none}
